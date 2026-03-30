@@ -39,6 +39,15 @@ assets/js/
   nav.js                # Hamburger toggle, active link, IntersectionObserver tabs
   order.js              # Butcher pre-order form: URL param pre-fill, mailto builder
   catering-order.js     # Catering form: renders full product table from JS data array, mailto builder
+
+assets/img/
+  *.jpg                 # Optimised web images (converted from PNG originals via sips, quality 85)
+  *.png                 # Original PNG source files (kept alongside JPGs)
+  logos/
+    logo-main-transparent.png   # Steak illustration — site nav & footer logo (transparent bg)
+    logo-schweizer-fleisch.png  # Certification badge
+    logo-pure-simmental.png     # Certification badge
+    logo-ip-suisse.png          # Certification badge
 ```
 
 ## CSS architecture
@@ -60,11 +69,36 @@ Every page uses the **identical nav block** (copy from any existing page). The n
 
 When adding a new page, copy the full `<nav>` and `<footer>` blocks from an existing page — they must stay in sync across all pages.
 
+The nav logo is `<img src="assets/img/logos/logo-main-transparent.png" alt="" class="nav__logo-icon">` — **not** an SVG. If the logo needs updating, replace the PNG file and run the background-removal script (see Images section below). Do not revert to the SVG placeholder.
+
+## Images
+
+All page images live in `assets/img/`. Source PNGs were converted to JPEG (quality 85, resized) using `sips` on macOS:
+- Hero images: 1920×1080
+- Product cards: 900×675 (4:3)
+- Split-section portrait: 900×1200
+
+To remove a white background from a logo PNG, use Pillow (requires `pip3 install Pillow`):
+```python
+from PIL import Image
+import numpy as np
+img = Image.open("input.png").convert("RGBA")
+data = np.array(img)
+r,g,b,a = data[:,:,0],data[:,:,1],data[:,:,2],data[:,:,3]
+mask = (r>210)&(g>210)&(b>210)
+data[mask] = [0,0,0,0]
+Image.fromarray(data).save("output.png")
+```
+
+`sips` on macOS can read WebP but **cannot write it** — use JPEG for all web images instead.
+
 ## Catering order form
 
 `catering-order.js` is data-driven: all ~65 products are defined in a `PRODUCTS` array at the top of the file. The table is rendered into `<div id="product-table">` by JS. To add or update a product, edit the array — do not touch the HTML.
 
-The `?kategorie=Grill` URL param (from "Grill anfragen →" links on `catering.html`) scrolls to the matching category section in the table.
+The `?kategorie=Grill` URL param (from "Grill anfragen →" links on `catering.html`) auto-opens and scrolls to the matching accordion section.
+
+Category headers act as accordions — collapsed by default, first category ("Grill & Grilladen") open on load. Selection badges appear in collapsed headers showing count of selected items.
 
 ## Online ordering (no backend)
 
