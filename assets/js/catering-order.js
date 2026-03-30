@@ -148,9 +148,11 @@
       html += '<tr class="order-table__category" id="cat-' + cat.id + '" data-cat="' + cat.id + '" '
             + 'role="button" tabindex="0" aria-expanded="false">'
             + '<td colspan="4">'
+            + '<div class="order-table__cat-inner">'
             + '<span class="order-table__cat-label">' + cat.label + '</span>'
             + '<span class="order-table__badge" id="badge-' + cat.id + '"></span>'
             + CHEVRON_SVG
+            + '</div>'
             + '</td>'
             + '</tr>';
       // Product rows — hidden by default

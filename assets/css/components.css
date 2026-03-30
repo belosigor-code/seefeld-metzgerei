@@ -1228,14 +1228,12 @@
 
 .order-table__category td {
   padding: var(--space-4) var(--space-5);
+}
+
+.order-table__cat-inner {
   display: flex;
   align-items: center;
   gap: var(--space-3);
-}
-
-/* Force the td to behave like a flex container in table context */
-.order-table__category > td {
-  display: flex;
   width: 100%;
 }
 
