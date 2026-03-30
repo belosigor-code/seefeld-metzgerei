@@ -229,6 +229,10 @@
   height: 64px;
 }
 
+.product-card__image:has(img) .product-card__icon {
+  display: none;
+}
+
 .product-card__body {
   padding: var(--space-6);
   flex: 1;
