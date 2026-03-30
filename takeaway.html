@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Seefeld Metzgerei Take Away – Täglich frisch zubereitete Mittagsgerichte zum Mitnehmen. Das Wochenmenu wechselt jede Woche.">
+  <title>Take Away Wochenmenu – Seefeld Metzgerei</title>
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <style>
+    /* ── Take Away specific styles ─────────────────────────── */
+    .menu-week {
+      background: var(--color-bone);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      max-width: 760px;
+      margin-inline: auto;
+    }
+
+    .menu-week__header {
+      background: var(--color-charcoal);
+      padding: var(--space-6) var(--space-8);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+    }
+
+    .menu-week__title {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      color: var(--color-bone);
+      font-weight: 700;
+    }
+
+    .menu-week__period {
+      font-family: var(--font-body);
+      font-size: var(--text-sm);
+      color: rgba(237, 224, 200, 0.7);
+    }
+
+    .menu-day {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: var(--space-4);
+      align-items: center;
+      padding: var(--space-6) var(--space-8);
+      border-bottom: 1px solid var(--color-border);
+      transition: background-color var(--transition);
+    }
+
+    .menu-day:last-child {
+      border-bottom: none;
+    }
+
+    .menu-day:hover {
+      background-color: rgba(192, 83, 58, 0.04);
+    }
+
+    .menu-day.menu-day--closed {
+      opacity: 0.5;
+    }
+
+    .menu-day__label {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-1);
+    }
+
+    .menu-day__weekday {
+      font-family: var(--font-slab);
+      font-size: var(--text-base);
+      font-weight: 600;
+      color: var(--color-terracotta);
+    }
+
+    .menu-day__date {
+      font-size: var(--text-xs);
+      color: var(--color-mocha);
+    }
+
+    .menu-day__dish {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      color: var(--color-espresso);
+      line-height: 1.5;
+    }
+
+    .menu-day__dish.closed-text {
+      font-style: italic;
+      color: var(--color-mocha);
+    }
+
+    @media (max-width: 480px) {
+      .menu-day {
+        grid-template-columns: 70px 1fr;
+        padding: var(--space-4) var(--space-6);
+      }
+      .menu-week__header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--space-4) var(--space-6);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav" id="site-nav" role="navigation" aria-label="Hauptnavigation">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo" aria-label="Seefeld Metzgerei – Zurück zur Startseite">
+        <svg class="nav__logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="6" y="8" width="20" height="14" rx="2" fill="currentColor" opacity="0.9"/>
+          <rect x="24" y="10" width="5" height="4" rx="1" fill="currentColor"/>
+          <rect x="15" y="22" width="3" height="8" rx="1.5" fill="currentColor" opacity="0.7"/>
+          <line x1="8" y1="14" x2="22" y2="14" stroke="#FAF6EE" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+        </svg>
+        <span class="nav__logo-text">Seefeld Metzgerei</span>
+      </a>
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu" role="list">
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="speisekarte.html">Fleisch &amp; Spezialitäten</a></li>
+        <li><a href="takeaway.html">Take Away</a></li>
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="bestellung.html" class="nav__cta">Bestellen</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <section class="page-hero page-hero--short" aria-label="Take Away">
+      <div class="page-hero__overlay"></div>
+      <div class="page-hero__content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Startseite</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">Take Away</span>
+        </nav>
+        <h1>Take Away <em>Wochenmenu</em></h1>
+        <p class="lead">Täglich frisch zubereitete Mittagsgerichte — zum Mitnehmen, mit bestem Schweizer Fleisch.</p>
+      </div>
+    </section>
+
+    <!-- INFO STRIP -->
+    <section class="section--sm section--parchment" aria-label="Hinweis Take Away">
+      <div class="container">
+        <div style="display:flex;flex-wrap:wrap;gap:var(--space-8);align-items:center;justify-content:center;text-align:center;">
+          <div>
+            <p class="overline" style="margin-bottom:var(--space-1);">Abholzeit</p>
+            <p style="font-family:var(--font-slab);font-size:var(--text-xl);font-weight:600;color:var(--color-espresso);">11:00 – 13:30 Uhr</p>
+            <p class="caption">Montag bis Freitag</p>
+          </div>
+          <div style="width:1px;height:60px;background:var(--color-border);display:none;" aria-hidden="true" class="divider-v"></div>
+          <div>
+            <p class="overline" style="margin-bottom:var(--space-1);">Ort</p>
+            <p style="font-family:var(--font-slab);font-size:var(--text-xl);font-weight:600;color:var(--color-espresso);">Seefeldstrasse 181</p>
+            <p class="caption">8008 Zürich</p>
+          </div>
+          <div>
+            <p class="overline" style="margin-bottom:var(--space-1);">Fragen?</p>
+            <a href="tel:+41444223356" style="font-family:var(--font-slab);font-size:var(--text-xl);font-weight:600;color:var(--color-terracotta);display:block;">044 422 33 56</a>
+            <p class="caption">Wir reservieren gerne für Sie</p>
+          </div>
+        </div>
+        <style>.divider-v { display: block !important; }</style>
+      </div>
+    </section>
+
+    <!-- CURRENT WEEK MENU -->
+    <section class="section" aria-labelledby="menu-heading">
+      <div class="container">
+        <span class="overline" style="display:block;text-align:center;margin-bottom:var(--space-3);">Take Away Seefeld</span>
+        <h2 id="menu-heading" class="section-title">Aktuelles Wochenmenu</h2>
+
+        <!--
+          ══════════════════════════════════════════════════════════
+          HOW TO UPDATE THIS MENU:
+          Each week, simply update the dates in menu-week__period
+          and the dish names in each menu-day__dish span.
+          Mark holidays with class="menu-day menu-day--closed"
+          and set the dish text to "Geschlossen" with class="closed-text"
+          ══════════════════════════════════════════════════════════
+        -->
+        <div class="menu-week" role="table" aria-label="Wochenmenu">
+
+          <div class="menu-week__header">
+            <span class="menu-week__title">Woche 14 · 2025</span>
+            <!-- Update the dates below each week -->
+            <span class="menu-week__period">31. März – 4. April 2025</span>
+          </div>
+
+          <div class="menu-day" role="row">
+            <div class="menu-day__label" role="rowheader">
+              <span class="menu-day__weekday">Montag</span>
+              <span class="menu-day__date">31.03.</span>
+            </div>
+            <span class="menu-day__dish" role="cell">
+              Gehacktes Rindfleisch mit Hörnli, dazu Apfelmus und Reibkäse
+            </span>
+          </div>
+
+          <div class="menu-day" role="row">
+            <div class="menu-day__label" role="rowheader">
+              <span class="menu-day__weekday">Dienstag</span>
+              <span class="menu-day__date">01.04.</span>
+            </div>
+            <span class="menu-day__dish" role="cell">
+              Spiessli mit Spätzli und Gemüse
+            </span>
+          </div>
+
+          <div class="menu-day" role="row">
+            <div class="menu-day__label" role="rowheader">
+              <span class="menu-day__weekday">Mittwoch</span>
+              <span class="menu-day__date">02.04.</span>
+            </div>
+            <span class="menu-day__dish" role="cell">
+              Cordonbleu mit Pommes Frites
+            </span>
+          </div>
+
+          <div class="menu-day" role="row">
+            <div class="menu-day__label" role="rowheader">
+              <span class="menu-day__weekday">Donnerstag</span>
+              <span class="menu-day__date">03.04.</span>
+            </div>
+            <span class="menu-day__dish" role="cell">
+              Fleischvögel mit Pasta und Gemüse
+            </span>
+          </div>
+
+          <div class="menu-day menu-day--closed" role="row">
+            <div class="menu-day__label" role="rowheader">
+              <span class="menu-day__weekday">Freitag</span>
+              <span class="menu-day__date">04.04.</span>
+            </div>
+            <span class="menu-day__dish closed-text" role="cell">
+              Bitte direkt anfragen — je nach Woche
+            </span>
+          </div>
+
+        </div>
+
+        <p class="caption" style="text-align:center;margin-top:var(--space-6);">
+          Das Menu wechselt wöchentlich. Für Reservierungen und Fragen rufen Sie uns an: <a href="tel:+41444223356">044 422 33 56</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section section--parchment" aria-labelledby="how-heading">
+      <div class="container">
+        <h2 id="how-heading" class="section-title">So funktioniert's</h2>
+
+        <div class="info-grid info-grid--3col">
+
+          <div class="info-card">
+            <svg class="info-card__icon" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="28" cy="28" r="26" stroke="currentColor" stroke-width="2" opacity="0.2"/>
+              <circle cx="28" cy="28" r="10" stroke="currentColor" stroke-width="2" fill="none" opacity="0.8"/>
+              <path d="M28 22 v6 l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <h3>1. Menu ansehen</h3>
+            <p>Das aktuelle Wochenmenu finden Sie hier auf dieser Seite. Es wird jeden Montag aktualisiert.</p>
+          </div>
+
+          <div class="info-card">
+            <svg class="info-card__icon" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="28" cy="28" r="26" stroke="currentColor" stroke-width="2" opacity="0.2"/>
+              <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493" stroke="currentColor" stroke-width="2" fill="none" opacity="0.8" transform="translate(14,14) scale(1.1)"/>
+              <rect x="14" y="18" width="28" height="20" rx="3" fill="currentColor" opacity="0.7"/>
+              <path d="M14 26 L42 26" stroke="white" stroke-width="1.5"/>
+            </svg>
+            <h3>2. Reservieren (optional)</h3>
+            <p>Rufen Sie uns an unter <a href="tel:+41444223356">044 422 33 56</a> — wir reservieren Ihr Menu gerne für Sie vor.</p>
+          </div>
+
+          <div class="info-card">
+            <svg class="info-card__icon" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="28" cy="28" r="26" stroke="currentColor" stroke-width="2" opacity="0.2"/>
+              <path d="M28 14 C22 14 17 19 17 25 C17 33 28 42 28 42 C28 42 39 33 39 25 C39 19 34 14 28 14Z" fill="currentColor" opacity="0.7"/>
+              <circle cx="28" cy="25" r="4" fill="white" opacity="0.9"/>
+            </svg>
+            <h3>3. Abholen & geniessen</h3>
+            <p>Zwischen 11:00 und 13:30 Uhr an der Seefeldstrasse 181 vorbeikommen — fertig. Bon appétit!</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--dark" aria-label="Kontakt">
+      <div class="container" style="text-align:center;">
+        <h2 style="margin-bottom:var(--space-4);">Fragen zum Take Away?</h2>
+        <p style="color:var(--color-parchment);max-width:480px;margin-inline:auto;margin-bottom:var(--space-8);">Wir reservieren gerne für Sie oder beantworten Ihre Fragen telefonisch oder per E-Mail.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:var(--space-4);justify-content:center;">
+          <a href="tel:+41444223356" class="btn btn--primary btn--lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            044 422 33 56
+          </a>
+          <a href="mailto:k.regattieri@gmail.com" class="btn btn--ghost btn--lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            E-Mail schreiben
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:44px;height:44px;margin-bottom:var(--space-4);color:var(--color-terracotta);">
+            <rect x="6" y="8" width="20" height="14" rx="2" fill="currentColor" opacity="0.9"/>
+            <rect x="24" y="10" width="5" height="4" rx="1" fill="currentColor"/>
+            <rect x="15" y="22" width="3" height="8" rx="1.5" fill="currentColor" opacity="0.7"/>
+          </svg>
+          <p class="footer__tagline">"Schweizer Qualität.<br>Zürcher Handwerk."</p>
+          <p>Gebr. Regattieri<br>Seefeldstrasse 181 · 8008 Zürich</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="speisekarte.html">Fleisch &amp; Spezialitäten</a></li>
+            <li><a href="takeaway.html">Take Away</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="bestellung.html">Bestellen</a></li>
+            <li><a href="https://www.seefeldcatering.ch" target="_blank" rel="noopener noreferrer">Partyservice ↗</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Kontakt</h4>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <address>Seefeldstrasse 181<br>8008 Zürich</address>
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            <a href="tel:+41444223356">044 422 33 56</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Öffnungszeiten</h4>
+          <div class="footer__hours-row"><span>Mo–Fr</span><span>09:00–13:00</span></div>
+          <div class="footer__hours-row"><span></span><span>14:30–18:30</span></div>
+          <div class="footer__hours-row"><span>Samstag</span><span>08:00–16:00</span></div>
+          <div class="footer__hours-row"><span>Sonntag</span><span>Geschlossen</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:var(--space-4);">
+        <span>&copy; 2025 Seefeld Metzgerei · Gebr. Regattieri</span>
+        <div class="footer__legal-links">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/nav.js"></script>
+</body>
+</html>

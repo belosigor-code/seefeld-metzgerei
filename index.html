@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Seefeld Metzgerei – Frisches Fleisch und hausgemachte Spezialitäten aus dem Herzen des Seefelds. Handwerk seit Generationen.">
+  <meta name="description" content="Seefeld Metzgerei – Ihr Metzger im Herzen von Zürich Seefeld. Frisches Schweizer Fleisch, hausgemachte Spezialitäten und wöchentliches Take-Away-Menu.">
   <meta name="theme-color" content="#1A0F08">
-  <title>Seefeld Metzgerei – Handwerk seit Generationen</title>
+  <title>Seefeld Metzgerei – Ihr Metzger in Zürich</title>
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/layout.css">
   <link rel="stylesheet" href="assets/css/components.css">
@@ -19,7 +19,6 @@
     <div class="nav__container">
       <a href="index.html" class="nav__logo" aria-label="Seefeld Metzgerei – Zurück zur Startseite">
         <svg class="nav__logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <!-- Cleaver silhouette -->
           <rect x="6" y="8" width="20" height="14" rx="2" fill="currentColor" opacity="0.9"/>
           <rect x="24" y="10" width="5" height="4" rx="1" fill="currentColor"/>
           <rect x="15" y="22" width="3" height="8" rx="1.5" fill="currentColor" opacity="0.7"/>
@@ -35,7 +34,8 @@
 
       <ul class="nav__menu" id="nav-menu" role="list">
         <li><a href="index.html">Startseite</a></li>
-        <li><a href="speisekarte.html">Speisekarte</a></li>
+        <li><a href="speisekarte.html">Fleisch & Spezialitäten</a></li>
+        <li><a href="takeaway.html">Take Away</a></li>
         <li><a href="ueber-uns.html">Über uns</a></li>
         <li><a href="kontakt.html">Kontakt</a></li>
         <li><a href="bestellung.html" class="nav__cta">Bestellen</a></li>
@@ -50,18 +50,17 @@
     ══════════════════════════════════════════════════════ -->
     <section class="page-hero" aria-label="Willkommen">
       <div class="page-hero__overlay"></div>
-      <!-- Replace the background-image below with a real photo: style="background-image: url('assets/images/hero-bg.jpg'); background-size: cover; background-position: center;" -->
       <div class="page-hero__content" style="text-align: left; max-width: 700px;">
-        <span class="page-hero__overline">Seefeld in Tirol · Seit 1987</span>
-        <h1><em>Handwerk<br>seit Generationen.</em></h1>
-        <p class="lead">Frisches Fleisch und hausgemachte Spezialitäten — direkt vom Alpenbauern, mit Sorgfalt verarbeitet von Familie Huber.</p>
+        <span class="page-hero__overline">Seefeldstrasse 181 · 8008 Zürich</span>
+        <h1><em>Handwerk.<br>Schweizer Qualität.</em></h1>
+        <p class="lead">Frisches Schweizer Fleisch und hausgemachte Spezialitäten — direkt von IP-Suisse-Betrieben, täglich frisch von Gebr. Regattieri verarbeitet.</p>
         <div class="page-hero__cta-group">
-          <a href="speisekarte.html" class="btn btn--primary btn--lg">
+          <a href="takeaway.html" class="btn btn--primary btn--lg">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
-            Zur Speisekarte
+            Wochenmenu ansehen
           </a>
-          <a href="bestellung.html" class="btn btn--ghost btn--lg">
-            Jetzt Bestellen
+          <a href="speisekarte.html" class="btn btn--ghost btn--lg">
+            Fleisch &amp; Spezialitäten
           </a>
         </div>
       </div>
@@ -81,37 +80,80 @@
           <div class="info-card">
             <svg class="info-card__icon" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <circle cx="28" cy="28" r="26" stroke="currentColor" stroke-width="2" opacity="0.2"/>
-              <!-- Knife icon -->
               <path d="M18 36 L38 16 L40 18 L22 40 Z" fill="currentColor" opacity="0.9"/>
               <path d="M38 14 L42 18 L40 20 L36 16 Z" fill="currentColor"/>
               <path d="M18 36 L20 40 L16 40 Z" fill="currentColor" opacity="0.6"/>
             </svg>
-            <h3>Frische Qualität</h3>
-            <p>Täglich frisch verarbeitet, von lokalen Bauernhöfen direkt aus der Tiroler Alpenregion.</p>
+            <h3>Schweizer Fleisch</h3>
+            <p>Ausschliesslich Schweizer Fleisch — zertifiziert, rückverfolgbar und von ausgesuchten Produzenten.</p>
           </div>
 
           <div class="info-card">
             <svg class="info-card__icon" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <circle cx="28" cy="28" r="26" stroke="currentColor" stroke-width="2" opacity="0.2"/>
-              <!-- Sausage / loop icon -->
               <path d="M16 28 C16 20 24 16 28 22 C32 28 36 22 40 28 C40 34 34 38 28 34 C22 38 16 36 16 28Z" fill="currentColor" opacity="0.8"/>
               <circle cx="28" cy="22" r="3" fill="currentColor"/>
             </svg>
-            <h3>Hausgemacht</h3>
-            <p>Über 30 Wurstsorten nach überlieferten Familienrezepten — ohne Zusatzstoffe, mit Liebe gemacht.</p>
+            <h3>Hausgemachte Spezialitäten</h3>
+            <p>Wurst und Aufschnitt nach eigenen Rezepten — ohne künstliche Zusatzstoffe, mit echtem Handwerk.</p>
           </div>
 
           <div class="info-card">
             <svg class="info-card__icon" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <circle cx="28" cy="28" r="26" stroke="currentColor" stroke-width="2" opacity="0.2"/>
-              <!-- Map pin icon -->
-              <path d="M28 14 C22 14 17 19 17 25 C17 33 28 42 28 42 C28 42 39 33 39 25 C39 19 34 14 28 14Z" fill="currentColor" opacity="0.8"/>
-              <circle cx="28" cy="25" r="4" fill="white" opacity="0.9"/>
+              <path d="M14 34 C14 22 22 14 32 18 C44 22 48 32 44 42 C40 52 26 56 18 46 Z" fill="currentColor" opacity="0.7"/>
+              <path d="M22 28 C22 28 26 32 34 26" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
             </svg>
-            <h3>Direkt aus der Region</h3>
-            <p>Eng vernetzt mit Seefelder Landwirten und Alpenbauern — kurze Wege, maximale Frische.</p>
+            <h3>IP-Suisse &amp; Pure Simmental</h3>
+            <p>Partner von IP-Suisse und Pure Simmental — für nachhaltige Landwirtschaft und Tierwohlstandards.</p>
           </div>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         TAKE AWAY HIGHLIGHT
+    ══════════════════════════════════════════════════════ -->
+    <section class="section" aria-labelledby="takeaway-heading">
+      <div class="container">
+        <div class="split split--60-40">
+          <div>
+            <span class="overline">Wöchentlich wechselnd</span>
+            <h2 id="takeaway-heading" style="margin-bottom:var(--space-6);">Take Away<br><em>Wochenmenu</em></h2>
+            <hr class="accent accent--left" style="margin-bottom:var(--space-8);">
+            <p class="lead" style="margin-bottom:var(--space-6);">Täglich frisch zubereitete Mittagsgerichte — zum Mitnehmen oder vor Ort geniessen.</p>
+            <p style="margin-bottom:var(--space-4);">Jede Woche neue Gerichte, immer mit bestem Schweizer Fleisch zubereitet. Von hausgemachten Fleischvögeln bis zum Cordonbleu.</p>
+            <p style="margin-bottom:var(--space-8);">Das aktuelle Wochenmenu finden Sie auf unserer Take-Away-Seite.</p>
+            <a href="takeaway.html" class="btn btn--primary btn--lg">Zum aktuellen Wochenmenu →</a>
+          </div>
+
+          <!-- Current week preview -->
+          <div style="background:var(--color-bone);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-8);box-shadow:var(--shadow-sm);">
+            <p class="overline" style="margin-bottom:var(--space-4);">Aktuelle Woche</p>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:var(--space-4);">
+              <li style="display:flex;gap:var(--space-3);align-items:flex-start;padding-bottom:var(--space-3);border-bottom:1px solid var(--color-border);">
+                <span style="font-family:var(--font-slab);font-size:var(--text-sm);font-weight:600;color:var(--color-terracotta);flex-shrink:0;min-width:32px;">Mo</span>
+                <span style="font-size:var(--text-sm);color:var(--color-mocha);">Gehacktes Rindfleisch mit Hörnli, Apfelmus und Reibkäse</span>
+              </li>
+              <li style="display:flex;gap:var(--space-3);align-items:flex-start;padding-bottom:var(--space-3);border-bottom:1px solid var(--color-border);">
+                <span style="font-family:var(--font-slab);font-size:var(--text-sm);font-weight:600;color:var(--color-terracotta);flex-shrink:0;min-width:32px;">Di</span>
+                <span style="font-size:var(--text-sm);color:var(--color-mocha);">Spiessli mit Spätzli und Gemüse</span>
+              </li>
+              <li style="display:flex;gap:var(--space-3);align-items:flex-start;padding-bottom:var(--space-3);border-bottom:1px solid var(--color-border);">
+                <span style="font-family:var(--font-slab);font-size:var(--text-sm);font-weight:600;color:var(--color-terracotta);flex-shrink:0;min-width:32px;">Mi</span>
+                <span style="font-size:var(--text-sm);color:var(--color-mocha);">Cordonbleu mit Pommes Frites</span>
+              </li>
+              <li style="display:flex;gap:var(--space-3);align-items:flex-start;padding-bottom:var(--space-3);border-bottom:1px solid var(--color-border);">
+                <span style="font-family:var(--font-slab);font-size:var(--text-sm);font-weight:600;color:var(--color-terracotta);flex-shrink:0;min-width:32px;">Do</span>
+                <span style="font-size:var(--text-sm);color:var(--color-mocha);">Fleischvögel mit Pasta und Gemüse</span>
+              </li>
+              <li style="display:flex;gap:var(--space-3);align-items:flex-start;">
+                <span style="font-family:var(--font-slab);font-size:var(--text-sm);font-weight:600;color:var(--color-terracotta);flex-shrink:0;min-width:32px;">Fr</span>
+                <span style="font-size:var(--text-sm);color:var(--color-mocha);">Je nach Wochentag — bitte direkt anfragen</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -119,68 +161,64 @@
     <!-- ══════════════════════════════════════════════════════
          FEATURED PRODUCTS
     ══════════════════════════════════════════════════════ -->
-    <section class="section" aria-labelledby="produkte-heading">
+    <section class="section section--parchment" aria-labelledby="produkte-heading">
       <div class="container">
         <h2 id="produkte-heading" class="section-title">Unsere Besonderheiten</h2>
 
         <div class="product-grid">
 
-          <!-- Card 1: Seefelder Bergwurst -->
+          <!-- Card 1: Pure Simmental Beef -->
           <article class="product-card">
             <div class="product-card__image">
-              <!-- Replace with: <img src="assets/images/bergwurst.jpg" alt="Seefelder Bergwurst" loading="lazy"> -->
-              <span class="product-card__badge"><span class="badge badge--terracotta">Hausgemacht</span></span>
+              <span class="product-card__badge"><span class="badge badge--gold">Pure Simmental</span></span>
               <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M16 32 C16 22 22 16 32 18 C42 20 48 28 44 38 C40 48 28 50 20 44 C14 40 14 36 16 32Z" fill="currentColor"/>
-                <path d="M32 18 C32 18 34 24 36 28 C38 32 40 36 36 40 C32 44 26 42 24 38 C20 30 26 18 32 18Z" fill="currentColor" opacity="0.3"/>
+                <path d="M10 34 L32 12 L54 34 L46 52 L18 52 Z" fill="currentColor"/>
+                <path d="M32 12 L38 32 L46 52" stroke="currentColor" stroke-width="2" opacity="0.4"/>
               </svg>
             </div>
             <div class="product-card__body">
-              <h3 class="product-card__name">Seefelder Bergwurst</h3>
-              <p class="product-card__desc">Kräftig geräuchert nach altem Familienrezept, mit heimischen Kräutern und Bergspeck.</p>
-              <div class="product-card__footer">
-                <div class="product-card__price">ab €4,50 <span>/ 100g</span></div>
-                <a href="bestellung.html?produkt=Seefelder+Bergwurst" class="btn btn--outline btn--sm">Bestellen →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 2: Kalbstafelspitz -->
-          <article class="product-card">
-            <div class="product-card__image">
-              <!-- Replace with: <img src="assets/images/kalbfleisch.jpg" alt="Kalbstafelspitz" loading="lazy"> -->
-              <span class="product-card__badge"><span class="badge badge--gold">Saisonal</span></span>
-              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M12 40 L28 16 L52 28 L44 48 L12 40Z" fill="currentColor"/>
-                <path d="M28 16 L34 32 L44 48" stroke="currentColor" stroke-width="2" opacity="0.4"/>
-              </svg>
-            </div>
-            <div class="product-card__body">
-              <h3 class="product-card__name">Kalbstafelspitz</h3>
-              <p class="product-card__desc">Zart marmoriertes Kalbfleisch vom Almbauern — für die perfekte Sonntagsspeise.</p>
+              <h3 class="product-card__name">Simmentaler Rindfleisch</h3>
+              <p class="product-card__desc">Zertifiziertes Pure Simmental — eine der edelsten Schweizer Rinderrassen, bekannt für ausgezeichnete Fleischqualität.</p>
               <div class="product-card__footer">
                 <div class="product-card__price">Marktpreis</div>
-                <a href="bestellung.html?produkt=Kalbstafelspitz" class="btn btn--outline btn--sm">Bestellen →</a>
+                <a href="bestellung.html?produkt=Simmentaler+Rindfleisch" class="btn btn--outline btn--sm">Bestellen →</a>
               </div>
             </div>
           </article>
 
-          <!-- Card 3: Hausmacher Leberkäse -->
+          <!-- Card 2: Cordonbleu -->
           <article class="product-card">
             <div class="product-card__image">
-              <!-- Replace with: <img src="assets/images/leberkase.jpg" alt="Hausmacher Leberkäse" loading="lazy"> -->
-              <span class="product-card__badge"><span class="badge badge--terracotta">Täglich frisch</span></span>
+              <span class="product-card__badge"><span class="badge badge--terracotta">Hausgemacht</span></span>
               <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <rect x="12" y="20" width="40" height="24" rx="4" fill="currentColor"/>
                 <rect x="12" y="20" width="40" height="8" rx="4" fill="currentColor" opacity="0.5"/>
               </svg>
             </div>
             <div class="product-card__body">
-              <h3 class="product-card__name">Hausmacher Leberkäse</h3>
-              <p class="product-card__desc">Frisch gebacken, täglich ab 7 Uhr — knusprige Kruste, saftiger Kern. Ein Klassiker.</p>
+              <h3 class="product-card__name">Cordonbleu</h3>
+              <p class="product-card__desc">Hausgemachtes Cordonbleu — knusprig paniert, mit feinem Schinken und Käse gefüllt. Ein Schweizer Klassiker.</p>
               <div class="product-card__footer">
-                <div class="product-card__price">€2,80 <span>/ 100g</span></div>
-                <a href="bestellung.html?produkt=Hausmacher+Leberk%C3%A4se" class="btn btn--outline btn--sm">Bestellen →</a>
+                <div class="product-card__price">auf Anfrage</div>
+                <a href="bestellung.html?produkt=Cordonbleu" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Fleischvögel -->
+          <article class="product-card">
+            <div class="product-card__image">
+              <span class="product-card__badge"><span class="badge badge--terracotta">Hausgemacht</span></span>
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M14 34 C14 24 20 16 30 20 C40 24 46 34 44 44 C42 52 32 56 24 50 C16 44 14 38 14 34Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Fleischvögel</h3>
+              <p class="product-card__desc">Handgerollte Fleischvögel nach Hausrezept — gefüllt, gebunden und fertig zum Kochen. Schweizer Traditionsküche.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">auf Anfrage</div>
+                <a href="bestellung.html?produkt=Fleischvögel" class="btn btn--outline btn--sm">Bestellen →</a>
               </div>
             </div>
           </article>
@@ -188,7 +226,7 @@
         </div>
 
         <div style="text-align: center; margin-top: var(--space-12);">
-          <a href="speisekarte.html" class="btn btn--primary btn--lg">Alle Produkte entdecken</a>
+          <a href="speisekarte.html" class="btn btn--primary btn--lg">Alle Fleisch &amp; Spezialitäten</a>
         </div>
       </div>
     </section>
@@ -196,28 +234,71 @@
     <!-- ══════════════════════════════════════════════════════
          ABOUT TEASER
     ══════════════════════════════════════════════════════ -->
-    <section class="section section--parchment" aria-labelledby="about-teaser-heading">
+    <section class="section" aria-labelledby="about-teaser-heading">
       <div class="container">
         <div class="split split--40-60">
 
-          <!-- Image -->
-          <div class="img-placeholder img-placeholder--hero" style="min-height: 460px;" role="img" aria-label="Metzger bei der Arbeit">
-            <!-- Replace with: <img src="assets/images/about-portrait.jpg" alt="Markus Huber, Metzgermeister" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-md);"> -->
+          <div class="img-placeholder img-placeholder--hero" style="min-height: 460px;" role="img" aria-label="Die Seefeld Metzgerei">
+            <!-- Replace with: <img src="assets/images/metzgerei.jpg" alt="Seefeld Metzgerei Zürich" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-md);"> -->
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:64px;height:64px;color:rgba(250,246,238,0.2);">
-              <circle cx="32" cy="20" r="10" fill="currentColor"/>
-              <path d="M12 52 C12 38 52 38 52 52" fill="currentColor"/>
+              <rect x="8" y="28" width="48" height="28" rx="2" fill="currentColor"/>
+              <path d="M4 30 L32 8 L60 30" fill="currentColor" opacity="0.6"/>
+              <rect x="24" y="36" width="16" height="20" fill="currentColor" opacity="0.4"/>
             </svg>
           </div>
 
-          <!-- Text -->
           <div>
-            <span class="overline">Unsere Geschichte</span>
-            <h2 id="about-teaser-heading" style="margin-bottom: var(--space-6);">Tradition trifft<br><em>Leidenschaft</em></h2>
+            <span class="overline">Gebr. Regattieri</span>
+            <h2 id="about-teaser-heading" style="margin-bottom: var(--space-6);">Ihr Metzger im<br><em>Herzen Zürichs</em></h2>
             <hr class="accent accent--left" style="margin-bottom: var(--space-8);">
-            <p class="lead" style="margin-bottom: var(--space-6);">Seit über drei Jahrzehnten steht Familie Huber für das Handwerk der Metzgerei.</p>
-            <p style="margin-bottom: var(--space-4);">In unserem kleinen Laden in Seefeld verarbeiten wir nur, was wir kennen — Fleisch von Bauern, denen wir persönlich vertrauen. Jedes Stück wird von Hand geschnitten, jede Wurst nach bewährtem Rezept gefertigt.</p>
-            <p style="margin-bottom: var(--space-8);">Wir glauben: Gutes Fleisch braucht keine großen Worte. Es spricht für sich.</p>
-            <a href="ueber-uns.html" class="btn btn--outline">Unsere Geschichte →</a>
+            <p class="lead" style="margin-bottom: var(--space-6);">Die Gebrüder Regattieri führen die Seefeld Metzgerei mit Leidenschaft und Sachverstand.</p>
+            <p style="margin-bottom: var(--space-4);">Im Zürcher Seefeld-Quartier sind wir seit Jahren fester Bestandteil des Quartierslebens. Wir beziehen unser Fleisch ausschliesslich aus der Schweiz — von Betrieben, denen wir persönlich vertrauen.</p>
+            <p style="margin-bottom: var(--space-8);">Ob frisches Fleisch, hausgemachte Wurst oder unser wöchentliches Take-Away-Menu — bei uns stimmt die Qualität.</p>
+            <a href="ueber-uns.html" class="btn btn--outline">Mehr über uns →</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         CERTIFICATIONS
+    ══════════════════════════════════════════════════════ -->
+    <section class="section section--parchment" aria-labelledby="certs-heading">
+      <div class="container" style="text-align:center;">
+        <span class="overline" style="display:block;margin-bottom:var(--space-3);">Anerkannte Qualität</span>
+        <h2 id="certs-heading" style="margin-bottom:var(--space-4);">Unsere Zertifizierungen</h2>
+        <p style="max-width:560px;margin-inline:auto;margin-bottom:var(--space-12);color:var(--color-mocha);">Wir sind stolze Partner von Schweizer Qualitätsprogrammen — für mehr Transparenz, Tierwohl und Nachhaltigkeit.</p>
+
+        <div class="award-strip">
+
+          <div class="award-badge">
+            <div class="award-badge__seal">
+              <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="18" cy="18" r="14" stroke="currentColor" stroke-width="2" fill="none"/>
+                <path d="M12 18 L16 22 L24 14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="award-badge__label">Schweizer Fleisch</span>
+          </div>
+
+          <div class="award-badge">
+            <div class="award-badge__seal">
+              <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <polygon points="18,4 22,14 33,14 24,21 27,32 18,25 9,32 12,21 3,14 14,14" fill="currentColor"/>
+              </svg>
+            </div>
+            <span class="award-badge__label">Pure Simmental</span>
+          </div>
+
+          <div class="award-badge">
+            <div class="award-badge__seal">
+              <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M18 4 C18 4 10 10 10 18 C10 26 14 32 18 32 C22 32 26 26 26 18 C26 10 18 4 18 4Z" fill="currentColor" opacity="0.8"/>
+                <path d="M14 18 C14 14 16 12 18 12 C20 12 22 14 22 18" stroke="white" stroke-width="1.5" fill="none"/>
+              </svg>
+            </div>
+            <span class="award-badge__label">IP-Suisse</span>
           </div>
 
         </div>
@@ -233,42 +314,43 @@
 
           <div class="hours-strip__cta">
             <span class="overline" style="color: var(--color-terracotta);">Wann Sie uns finden</span>
-            <h2 id="hours-heading">Besuchen Sie uns<br>im Herzen Seefelds.</h2>
-            <p class="lead">Wir freuen uns auf Sie — frisch, persönlich, direkt.</p>
-            <a href="tel:+4351220000" class="hours-strip__phone">+43 5122 00 000</a>
-            <a href="https://wa.me/4351220000?text=Hallo%2C%20ich%20m%C3%B6chte%20gerne%20eine%20Frage%20stellen."
-               class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.117 1.524 5.845L.057 23.882l6.228-1.443A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.82 9.82 0 01-5.002-1.375l-.358-.213-3.697.856.878-3.592-.235-.369A9.82 9.82 0 012.182 12C2.182 6.582 6.582 2.182 12 2.182S21.818 6.582 21.818 12 17.418 21.818 12 21.818z"/></svg>
-              Auf WhatsApp schreiben
-            </a>
+            <h2 id="hours-heading">Besuchen Sie uns<br>im Zürcher Seefeld.</h2>
+            <p class="lead">Seefeldstrasse 181 · 8008 Zürich</p>
+            <a href="tel:+41444223356" class="hours-strip__phone">044 422 33 56</a>
+            <div style="display:flex;flex-wrap:wrap;gap:var(--space-3);">
+              <a href="mailto:k.regattieri@gmail.com" class="btn btn--ghost btn--sm">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                E-Mail schreiben
+              </a>
+              <a href="kontakt.html" class="btn btn--ghost btn--sm">Anfahrt &amp; Karte →</a>
+            </div>
           </div>
 
           <div>
             <div class="hours-strip__table" aria-label="Öffnungszeiten">
               <div class="hours-strip__row">
                 <span class="day">Montag – Freitag</span>
-                <span class="time">7:00 – 18:00</span>
+                <span class="time">09:00 – 13:00</span>
               </div>
               <div class="hours-strip__row">
+                <span class="day"></span>
+                <span class="time">14:30 – 18:30</span>
+              </div>
+              <div class="hours-strip__row" style="margin-top:var(--space-2);">
                 <span class="day">Samstag</span>
-                <span class="time">7:00 – 13:00</span>
+                <span class="time">08:00 – 16:00</span>
               </div>
               <div class="hours-strip__row">
-                <span class="day">Sonntag</span>
+                <span class="day">Sonntag &amp; Feiertage</span>
                 <span class="closed">Geschlossen</span>
-              </div>
-              <div class="hours-strip__row">
-                <span class="day">Feiertage</span>
-                <span class="closed">Bitte anfragen</span>
               </div>
             </div>
 
-            <div style="margin-top: var(--space-8);">
-              <p style="color: rgba(237,224,200,0.7); font-size: var(--text-sm); margin-bottom: var(--space-3);">
-                <strong style="color:var(--color-bone);">Seefeld Metzgerei</strong><br>
-                Dorfplatz 12 · 6100 Seefeld in Tirol
+            <div style="margin-top:var(--space-8);padding:var(--space-4);background:rgba(250,246,238,0.06);border-radius:var(--radius-sm);border:1px solid rgba(250,246,238,0.1);">
+              <p style="font-size:var(--text-sm);color:rgba(237,224,200,0.7);margin:0;">
+                Partyservice &amp; Catering:<br>
+                <a href="https://www.seefeldcatering.ch" target="_blank" rel="noopener noreferrer" style="color:var(--color-terracotta);">www.seefeldcatering.ch</a>
               </p>
-              <a href="kontakt.html" class="btn btn--ghost btn--sm">Anfahrt & Karte →</a>
             </div>
           </div>
 
@@ -285,53 +367,51 @@
     <div class="container">
       <div class="footer__grid">
 
-        <!-- Brand -->
         <div class="footer__brand">
           <svg class="nav__logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:44px;height:44px;margin-bottom:var(--space-4);">
             <rect x="6" y="8" width="20" height="14" rx="2" fill="currentColor" opacity="0.9"/>
             <rect x="24" y="10" width="5" height="4" rx="1" fill="currentColor"/>
             <rect x="15" y="22" width="3" height="8" rx="1.5" fill="currentColor" opacity="0.7"/>
           </svg>
-          <p class="footer__tagline">"Gutes Fleisch.<br>Ehrliches Handwerk."</p>
-          <p>Familie Huber, Seefeld in Tirol.<br>Handwerk seit 1987.</p>
+          <p class="footer__tagline">"Schweizer Qualität.<br>Zürcher Handwerk."</p>
+          <p>Gebr. Regattieri<br>Seefeldstrasse 181 · 8008 Zürich</p>
         </div>
 
-        <!-- Navigation -->
         <div class="footer__col">
           <h4>Navigation</h4>
           <ul>
             <li><a href="index.html">Startseite</a></li>
-            <li><a href="speisekarte.html">Speisekarte</a></li>
+            <li><a href="speisekarte.html">Fleisch &amp; Spezialitäten</a></li>
+            <li><a href="takeaway.html">Take Away</a></li>
             <li><a href="ueber-uns.html">Über uns</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
             <li><a href="bestellung.html">Bestellen</a></li>
+            <li><a href="https://www.seefeldcatering.ch" target="_blank" rel="noopener noreferrer">Partyservice ↗</a></li>
           </ul>
         </div>
 
-        <!-- Contact -->
         <div class="footer__col">
           <h4>Kontakt</h4>
           <div class="footer__contact-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-            <address>Dorfplatz 12<br>6100 Seefeld in Tirol</address>
+            <address>Seefeldstrasse 181<br>8008 Zürich</address>
           </div>
           <div class="footer__contact-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-            <a href="tel:+4351220000">+43 5122 00 000</a>
+            <a href="tel:+41444223356">044 422 33 56</a>
           </div>
           <div class="footer__contact-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-            <a href="mailto:info@seefeld-metzgerei.at">info@seefeld-metzgerei.at</a>
+            <a href="mailto:k.regattieri@gmail.com">k.regattieri@gmail.com</a>
           </div>
         </div>
 
-        <!-- Hours -->
         <div class="footer__col">
           <h4>Öffnungszeiten</h4>
-          <div class="footer__hours-row"><span>Mo–Fr</span><span>7:00–18:00</span></div>
-          <div class="footer__hours-row"><span>Samstag</span><span>7:00–13:00</span></div>
+          <div class="footer__hours-row"><span>Mo–Fr</span><span>09:00–13:00</span></div>
+          <div class="footer__hours-row"><span></span><span>14:30–18:30</span></div>
+          <div class="footer__hours-row"><span>Samstag</span><span>08:00–16:00</span></div>
           <div class="footer__hours-row"><span>Sonntag</span><span>Geschlossen</span></div>
-          <div class="footer__hours-row"><span>Feiertage</span><span>Bitte anfragen</span></div>
         </div>
 
       </div>
@@ -339,7 +419,7 @@
 
     <div class="footer__bottom">
       <div class="container" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:var(--space-4);">
-        <span>&copy; 2025 Seefeld Metzgerei · Familie Huber</span>
+        <span>&copy; 2025 Seefeld Metzgerei · Gebr. Regattieri</span>
         <div class="footer__legal-links">
           <a href="impressum.html">Impressum</a>
           <a href="datenschutz.html">Datenschutz</a>

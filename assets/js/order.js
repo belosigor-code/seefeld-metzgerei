@@ -22,7 +22,7 @@
   const whatsappBtn = document.getElementById('btn-whatsapp');
 
   if (whatsappBtn) {
-    const PHONE = '43512200000'; // Replace with real number (no + prefix)
+    const PHONE = '41444223356'; // Seefeld Metzgerei Zürich (no + prefix)
 
     const updateWhatsApp = function () {
       const name    = (document.getElementById('order-name')    || {}).value || '';
@@ -52,7 +52,7 @@
   /* ── Mailto form builder ─────────────────────────────────── */
   const orderForm    = document.getElementById('order-form');
   const submitBtn    = document.getElementById('order-submit');
-  const BESTELLUNG_MAIL = 'bestellung@seefeld-metzgerei.at'; // Replace with real email
+  const BESTELLUNG_MAIL = 'k.regattieri@gmail.com';
 
   if (orderForm && submitBtn) {
 
