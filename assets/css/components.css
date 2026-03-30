@@ -603,7 +603,7 @@
 .award-strip {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: var(--space-8);
   padding-block: var(--space-6);
