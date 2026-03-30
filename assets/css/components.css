@@ -1194,6 +1194,184 @@
   border-bottom: 1px solid var(--color-border);
 }
 
+/* ── Order table (catering-bestellung) ───────────────────── */
+.order-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.order-tabs__link {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-mocha);
+  text-decoration: none;
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bone);
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+  white-space: nowrap;
+}
+
+.order-tabs__link:hover {
+  background: var(--color-terracotta);
+  color: var(--color-bone);
+  border-color: var(--color-terracotta);
+}
+
+.order-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+  background: var(--color-bone);
+}
+
+.order-table__head th {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--color-mocha);
+  background: var(--color-parchment);
+  border-bottom: 2px solid var(--color-border);
+}
+
+/* Category header rows */
+.order-table__category {
+  background: var(--color-parchment);
+}
+
+.order-table__category td {
+  padding: var(--space-3) var(--space-4);
+  border-top: 2px solid var(--color-border);
+}
+
+.order-table__category span {
+  font-family: var(--font-slab);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-espresso);
+  padding-left: var(--space-2);
+  border-left: 3px solid var(--color-terracotta);
+}
+
+/* Product rows */
+.order-table__row td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+  color: var(--color-espresso);
+}
+
+.order-table__row:last-child td {
+  border-bottom: none;
+}
+
+.order-table__row:hover td {
+  background: rgba(192, 83, 58, 0.03);
+}
+
+.order-table__row--selected td {
+  background: rgba(192, 83, 58, 0.06);
+}
+
+.order-table__check-cell {
+  width: 40px;
+  text-align: center;
+}
+
+.order-table__check-cell input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-terracotta);
+  cursor: pointer;
+  margin: 0;
+}
+
+.order-table__label {
+  cursor: pointer;
+  display: block;
+  line-height: 1.5;
+}
+
+.order-table__label:hover {
+  color: var(--color-terracotta);
+}
+
+.order-table__detail {
+  font-size: var(--text-xs);
+  color: var(--color-mocha);
+  font-weight: 400;
+  display: block;
+}
+
+.order-table__price {
+  font-family: var(--font-slab);
+  font-weight: 600;
+  color: var(--color-rust-gold);
+  white-space: nowrap;
+}
+
+.order-table__price-col,
+.order-table__qty-col {
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .order-table__price-col {
+    display: none;
+  }
+}
+
+/* Qty input */
+.order-qty {
+  width: 72px;
+  padding: var(--space-1) var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-espresso);
+  background: var(--color-bone);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  transition: border-color var(--transition), opacity var(--transition);
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+.order-qty:focus {
+  border-color: var(--color-terracotta);
+  box-shadow: 0 0 0 3px rgba(192, 83, 58, 0.15);
+}
+
+.order-qty:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  background: var(--color-parchment);
+}
+
+.order-qty::-webkit-inner-spin-button,
+.order-qty::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
 /* ── Legal pages ──────────────────────────────────────────── */
 .legal-content {
   max-width: 760px;
