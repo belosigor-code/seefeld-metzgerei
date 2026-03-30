@@ -1227,7 +1227,7 @@
 }
 
 .order-table__category td {
-  padding: var(--space-4) var(--space-5);
+  padding: var(--space-5) var(--space-6);
 }
 
 .order-table__cat-inner {

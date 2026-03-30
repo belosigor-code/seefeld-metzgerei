@@ -179,6 +179,7 @@
   }
 
   renderTable();
+  openCategory('grill');
 
   /* ── Accordion toggle ─────────────────────────────────────── */
   function openCategory(catId) {
