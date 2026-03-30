@@ -132,37 +132,33 @@
     return 'CHF\u00a0' + p.toFixed(2).replace('.', '.');
   }
 
+  var CHEVRON_SVG = '<svg class="order-table__chevron" viewBox="0 0 24 24" fill="none" '
+    + 'stroke="currentColor" stroke-width="2.5" aria-hidden="true">'
+    + '<path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
   function renderTable() {
     var html = '';
 
-    // Category tab bar
-    html += '<div class="order-tabs" role="tablist" aria-label="Produktkategorien">';
-    CATEGORIES.forEach(function (cat) {
-      html += '<a class="order-tabs__link" href="#cat-' + cat.id + '" data-cat="' + cat.id + '">'
-            + cat.label + '</a>';
-    });
-    html += '</div>';
-
-    // Table
-    html += '<div class="order-table-wrap"><table class="order-table" role="grid">'
-          + '<thead class="order-table__head"><tr>'
-          + '<th style="width:40px;" aria-label="Auswählen"></th>'
-          + '<th>Produkt</th>'
-          + '<th class="order-table__price-col">Preis</th>'
-          + '<th class="order-table__qty-col">Menge</th>'
-          + '</tr></thead><tbody>';
+    // Table — no thead, categories act as headers
+    html += '<div class="order-table-wrap"><table class="order-table" role="grid"><tbody>';
 
     CATEGORIES.forEach(function (cat) {
       var products = PRODUCTS.filter(function (p) { return p.cat === cat.id; });
-      // Category header row
-      html += '<tr class="order-table__category" id="cat-' + cat.id + '">'
-            + '<td colspan="4"><span>' + cat.label + '</span></td>'
+      // Category accordion header
+      html += '<tr class="order-table__category" id="cat-' + cat.id + '" data-cat="' + cat.id + '" '
+            + 'role="button" tabindex="0" aria-expanded="false">'
+            + '<td colspan="4">'
+            + '<span class="order-table__cat-label">' + cat.label + '</span>'
+            + '<span class="order-table__badge" id="badge-' + cat.id + '"></span>'
+            + CHEVRON_SVG
+            + '</td>'
             + '</tr>';
+      // Product rows — hidden by default
       products.forEach(function (p) {
         var nameHtml = p.detail
           ? p.name + ' <small class="order-table__detail">' + p.detail + '</small>'
           : p.name;
-        html += '<tr class="order-table__row" data-id="' + p.id + '">'
+        html += '<tr class="order-table__row order-table__row--hidden" data-id="' + p.id + '" data-cat="' + cat.id + '">'
               + '<td class="order-table__check-cell">'
               +   '<input type="checkbox" class="order-cb" id="p-' + p.id + '" data-id="' + p.id + '" aria-label="' + p.name + ' auswählen">'
               + '</td>'
@@ -181,6 +177,73 @@
   }
 
   renderTable();
+
+  /* ── Accordion toggle ─────────────────────────────────────── */
+  function openCategory(catId) {
+    var header = tableContainer.querySelector('#cat-' + catId);
+    if (!header) return;
+    var isOpen = header.classList.contains('order-table__category--open');
+    if (isOpen) return; // already open
+
+    header.classList.add('order-table__category--open');
+    header.setAttribute('aria-expanded', 'true');
+    tableContainer.querySelectorAll('.order-table__row[data-cat="' + catId + '"]').forEach(function (row) {
+      row.classList.remove('order-table__row--hidden');
+    });
+  }
+
+  function closeCategory(catId) {
+    var header = tableContainer.querySelector('#cat-' + catId);
+    if (!header) return;
+    header.classList.remove('order-table__category--open');
+    header.setAttribute('aria-expanded', 'false');
+    tableContainer.querySelectorAll('.order-table__row[data-cat="' + catId + '"]').forEach(function (row) {
+      row.classList.add('order-table__row--hidden');
+    });
+  }
+
+  function toggleCategory(catId) {
+    var header = tableContainer.querySelector('#cat-' + catId);
+    if (!header) return;
+    if (header.classList.contains('order-table__category--open')) {
+      closeCategory(catId);
+    } else {
+      openCategory(catId);
+    }
+  }
+
+  tableContainer.addEventListener('click', function (e) {
+    var header = e.target.closest('.order-table__category');
+    if (header) {
+      // Don't toggle if the click is on a checkbox inside (shouldn't happen but safety)
+      if (e.target.type === 'checkbox') return;
+      toggleCategory(header.dataset.cat);
+      return;
+    }
+    // Existing tab link handling
+    var link = e.target.closest('.order-tabs__link');
+    if (link) {
+      e.preventDefault();
+      var catId = link.dataset.cat;
+      openCategory(catId);
+      var target = document.getElementById('cat-' + catId);
+      if (target) {
+        var top = target.getBoundingClientRect().top + window.scrollY - 120;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    }
+  });
+
+  // Keyboard support (Enter / Space) on category rows
+  tableContainer.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      var header = e.target.closest('.order-table__category');
+      if (header) {
+        e.preventDefault();
+        toggleCategory(header.dataset.cat);
+      }
+    }
+  });
 
   /* ── Tab scroll ───────────────────────────────────────────── */
   tableContainer.addEventListener('click', function (e) {
@@ -231,25 +294,42 @@
     return selected;
   }
 
-  /* ── Live sidebar summary ─────────────────────────────────── */
+  /* ── Live sidebar summary + category badges ──────────────── */
   var summaryEl = document.getElementById('catering-summary');
 
   function updateSummary() {
-    if (!summaryEl) return;
     var selection = getSelection();
-    if (!selection.length) {
-      summaryEl.innerHTML = '<p style="font-size:var(--text-sm);color:var(--color-mocha);font-style:italic;">Noch keine Produkte ausgewählt.</p>';
-      return;
+
+    // Update sidebar
+    if (summaryEl) {
+      if (!selection.length) {
+        summaryEl.innerHTML = '<p style="font-size:var(--text-sm);color:var(--color-mocha);font-style:italic;">Noch keine Produkte ausgewählt.</p>';
+      } else {
+        var html = '<ul style="list-style:none;display:flex;flex-direction:column;gap:var(--space-2);">';
+        selection.forEach(function (item) {
+          html += '<li style="font-size:var(--text-sm);color:var(--color-espresso);display:flex;justify-content:space-between;gap:var(--space-2);">'
+                + '<span><strong style="color:var(--color-terracotta);">' + item.qty + '×</strong> ' + item.product.name + '</span>'
+                + '<span style="color:var(--color-rust-gold);white-space:nowrap;font-weight:600;">' + fmtPrice(item.product.price) + '</span>'
+                + '</li>';
+        });
+        html += '</ul>';
+        summaryEl.innerHTML = html;
+      }
     }
-    var html = '<ul style="list-style:none;display:flex;flex-direction:column;gap:var(--space-2);">';
-    selection.forEach(function (item) {
-      html += '<li style="font-size:var(--text-sm);color:var(--color-espresso);display:flex;justify-content:space-between;gap:var(--space-2);">'
-            + '<span><strong style="color:var(--color-terracotta);">' + item.qty + '×</strong> ' + item.product.name + '</span>'
-            + '<span style="color:var(--color-rust-gold);white-space:nowrap;font-weight:600;">' + fmtPrice(item.product.price) + '</span>'
-            + '</li>';
+
+    // Update per-category badges in accordion headers
+    CATEGORIES.forEach(function (cat) {
+      var badgeEl = document.getElementById('badge-' + cat.id);
+      if (!badgeEl) return;
+      var count = selection.filter(function (s) { return s.product.cat === cat.id; }).length;
+      if (count > 0) {
+        badgeEl.textContent = count + ' ausgewählt';
+        badgeEl.style.display = 'inline-block';
+      } else {
+        badgeEl.textContent = '';
+        badgeEl.style.display = 'none';
+      }
     });
-    html += '</ul>';
-    summaryEl.innerHTML = html;
   }
 
   /* ── Contact / event form ─────────────────────────────────── */
@@ -360,7 +440,7 @@
     });
   }
 
-  /* ── URL param: scroll to category ───────────────────────── */
+  /* ── URL param: open + scroll to matching category ──────── */
   var params    = new URLSearchParams(window.location.search);
   var kategorie = params.get('kategorie');
   if (kategorie) {
@@ -370,13 +450,14 @@
           || c.id.indexOf(decoded) !== -1;
     })[0];
     if (match) {
+      openCategory(match.id);
       setTimeout(function () {
         var target = document.getElementById('cat-' + match.id);
         if (target) {
           var top = target.getBoundingClientRect().top + window.scrollY - 120;
           window.scrollTo({ top: top, behavior: 'smooth' });
         }
-      }, 200);
+      }, 100);
     }
   }
 
