@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catering anfragen – Seefeld Metzgerei Partyservice. Grill, Apéro, warme Menüs und mehr für Ihren Anlass in Zürich.">
+  <meta name="theme-color" content="#1A0F08">
+  <title>Catering anfragen – Seefeld Metzgerei</title>
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body>
+
+  <nav class="site-nav" id="site-nav" role="navigation" aria-label="Hauptnavigation">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo" aria-label="Seefeld Metzgerei – Zurück zur Startseite">
+        <svg class="nav__logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="6" y="8" width="20" height="14" rx="2" fill="currentColor" opacity="0.9"/>
+          <rect x="24" y="10" width="5" height="4" rx="1" fill="currentColor"/>
+          <rect x="15" y="22" width="3" height="8" rx="1.5" fill="currentColor" opacity="0.7"/>
+          <line x1="8" y1="14" x2="22" y2="14" stroke="#FAF6EE" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+        </svg>
+        <span class="nav__logo-text">Seefeld Metzgerei</span>
+      </a>
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu" role="list">
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="speisekarte.html">Fleisch &amp; Spezialitäten</a></li>
+        <li><a href="takeaway.html">Take Away</a></li>
+        <li><a href="catering.html">Catering</a></li>
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="bestellung.html" class="nav__cta">Bestellen</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="page-hero page-hero--short" aria-label="Catering anfragen">
+      <div class="page-hero__overlay"></div>
+      <div class="page-hero__content">
+        <span class="page-hero__overline">Partyservice &amp; Events</span>
+        <h1><em>Catering anfragen</em></h1>
+        <p class="lead">Beschreiben Sie Ihren Anlass — wir bestätigen Ihre Anfrage innert 24 Stunden.</p>
+      </div>
+    </section>
+
+    <!-- INFO BANNER -->
+    <div style="background:var(--color-parchment);border-bottom:1px solid var(--color-border);padding:var(--space-4) var(--container-pad);">
+      <div class="container">
+        <div style="display:flex;flex-wrap:wrap;gap:var(--space-6);align-items:center;">
+          <div style="display:flex;align-items:center;gap:var(--space-2);font-size:var(--text-sm);color:var(--color-mocha);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;flex-shrink:0;color:var(--color-terracotta);" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            Bestellung mindestens <strong style="color:var(--color-espresso);margin-inline:4px;">1 Woche</strong> vor dem Anlass
+          </div>
+          <div style="display:flex;align-items:center;gap:var(--space-2);font-size:var(--text-sm);color:var(--color-mocha);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;flex-shrink:0;color:var(--color-terracotta);" aria-hidden="true"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            Bestätigung per E-Mail
+          </div>
+          <div style="display:flex;align-items:center;gap:var(--space-2);font-size:var(--text-sm);color:var(--color-mocha);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;flex-shrink:0;color:var(--color-terracotta);" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            Lieferung in Zürich &amp; Umgebung
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="catering-form-layout">
+
+          <!-- ── FORM ── -->
+          <div class="catering-form-main">
+
+            <!-- Quick-contact alternatives -->
+            <div style="display:flex;flex-wrap:wrap;gap:var(--space-3);margin-bottom:var(--space-10);">
+              <a href="https://wa.me/41444223356?text=Hallo%2C+ich+interessiere+mich+f%C3%BCr+das+Catering-Angebot." class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Direkt via WhatsApp
+              </a>
+              <a href="tel:+41444223356" class="btn btn--outline">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                044 422 33 56
+              </a>
+            </div>
+
+            <p style="font-size:var(--text-sm);color:var(--color-mocha);margin-bottom:var(--space-10);padding-bottom:var(--space-8);border-bottom:1px solid var(--color-border);">Oder füllen Sie das Formular aus — wir öffnen Ihr E-Mail-Programm mit einer vorausgefüllten Anfrage.</p>
+
+            <form id="catering-form" novalidate>
+
+              <!-- Section 1: Contact -->
+              <div class="catering-form-section">
+                <h2 class="catering-form-section__title">Ihre Kontaktdaten</h2>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="c-name">Name *</label>
+                    <input type="text" id="c-name" name="name" placeholder="Vor- und Nachname" required autocomplete="name">
+                  </div>
+                  <div class="form-group">
+                    <label for="c-firma">Firma / Organisation</label>
+                    <input type="text" id="c-firma" name="firma" placeholder="Optional" autocomplete="organization">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="c-telefon">Telefon *</label>
+                    <input type="tel" id="c-telefon" name="telefon" placeholder="044 000 00 00" required autocomplete="tel">
+                  </div>
+                  <div class="form-group">
+                    <label for="c-email">E-Mail *</label>
+                    <input type="email" id="c-email" name="email" placeholder="ihre@email.ch" required autocomplete="email">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="c-adresse">Lieferadresse</label>
+                  <input type="text" id="c-adresse" name="adresse" placeholder="Strasse, PLZ Ort" autocomplete="street-address">
+                </div>
+              </div>
+
+              <!-- Section 2: Event Details -->
+              <div class="catering-form-section">
+                <h2 class="catering-form-section__title">Event-Details</h2>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="c-datum">Datum des Anlasses *</label>
+                    <input type="date" id="c-datum" name="datum" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="c-personen">Anzahl Personen *</label>
+                    <input type="number" id="c-personen" name="personen" min="1" placeholder="z.B. 20" required>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="c-lieferzeit">Gewünschte Lieferzeit</label>
+                    <input type="time" id="c-lieferzeit" name="lieferzeit">
+                  </div>
+                  <div class="form-group">
+                    <label for="c-aufraeum">Aufräumzeit / Ende</label>
+                    <input type="time" id="c-aufraeum" name="aufraeum">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section 3: What do you want -->
+              <div class="catering-form-section">
+                <h2 class="catering-form-section__title">Gewünschtes Angebot</h2>
+                <p style="font-size:var(--text-sm);color:var(--color-mocha);margin-bottom:var(--space-6);">Wählen Sie die gewünschten Kategorien aus und beschreiben Sie in den Hinweisen die gewünschten Speisen. Das vollständige Angebot mit allen Preisen finden Sie auf der <a href="catering.html" style="color:var(--color-terracotta);">Catering-Seite</a>.</p>
+
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);margin-bottom:var(--space-8);">
+
+                  <label class="catering-check" id="check-grill">
+                    <input type="checkbox" name="kategorien" value="Grill &amp; Grilladen" id="kat-grill">
+                    <span class="catering-check__box" aria-hidden="true">
+                      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3 3 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    <span class="catering-check__label">
+                      <strong>Grill &amp; Grilladen</strong>
+                      Steaks, Salsiccia, Würste
+                    </span>
+                  </label>
+
+                  <label class="catering-check" id="check-salat">
+                    <input type="checkbox" name="kategorien" value="Salate &amp; Desserts" id="kat-salat">
+                    <span class="catering-check__box" aria-hidden="true">
+                      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3 3 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    <span class="catering-check__label">
+                      <strong>Salate &amp; Desserts</strong>
+                      Angemachte und rohe Salate
+                    </span>
+                  </label>
+
+                  <label class="catering-check" id="check-apero">
+                    <input type="checkbox" name="kategorien" value="Apéro" id="kat-apero">
+                    <span class="catering-check__box" aria-hidden="true">
+                      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3 3 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    <span class="catering-check__label">
+                      <strong>Apéro</strong>
+                      Platten, Fingerfood, Sandwiches
+                    </span>
+                  </label>
+
+                  <label class="catering-check" id="check-menu">
+                    <input type="checkbox" name="kategorien" value="Warme Menüs" id="kat-menu">
+                    <span class="catering-check__box" aria-hidden="true">
+                      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3 3 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    <span class="catering-check__label">
+                      <strong>Warme Menüs</strong>
+                      Geschnetzeltes, Haxen, Braten
+                    </span>
+                  </label>
+
+                  <label class="catering-check" id="check-getraenke">
+                    <input type="checkbox" name="kategorien" value="Getränke" id="kat-getraenke">
+                    <span class="catering-check__box" aria-hidden="true">
+                      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3 3 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    <span class="catering-check__label">
+                      <strong>Getränke</strong>
+                      Wein, Bier, Softdrinks, Kaffee
+                    </span>
+                  </label>
+
+                  <label class="catering-check" id="check-vermietung">
+                    <input type="checkbox" name="kategorien" value="Geräte- &amp; Geschirrvermietung" id="kat-vermietung">
+                    <span class="catering-check__box" aria-hidden="true">
+                      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3 3 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    <span class="catering-check__label">
+                      <strong>Geräte &amp; Geschirr</strong>
+                      Grill, Zelt, Teller, Gläser
+                    </span>
+                  </label>
+
+                </div>
+
+                <div class="form-group">
+                  <label for="c-hinweis">Gewünschte Speisen &amp; Hinweise *</label>
+                  <textarea id="c-hinweis" name="hinweis" rows="6" placeholder="Beschreiben Sie bitte, was Sie bestellen möchten. Zum Beispiel: 20x Kalbshohrückensteak, 20x Pouletspiesse, Kartoffelsalat für 20 Personen, 2x Gasgrill-Miete …" required></textarea>
+                  <p class="form-note">Schauen Sie auf der <a href="catering.html" style="color:var(--color-terracotta);">Catering-Seite</a> alle verfügbaren Produkte und Preise an.</p>
+                </div>
+
+              </div>
+
+              <!-- Submit -->
+              <div style="display:flex;flex-wrap:wrap;gap:var(--space-4);align-items:center;">
+                <button type="submit" class="btn btn--primary btn--lg" id="catering-submit" disabled style="opacity:0.5;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                  Anfrage senden
+                </button>
+                <p style="font-size:var(--text-xs);color:var(--color-mocha);max-width:360px;">Öffnet Ihr E-Mail-Programm mit einer vorausgefüllten Nachricht an k.regattieri@gmail.com</p>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- ── SIDEBAR ── -->
+          <aside class="catering-form-sidebar">
+
+            <div class="catering-sidebar-box">
+              <h3>Ihre Auswahl</h3>
+              <div id="catering-summary">
+                <p style="font-size:var(--text-sm);color:var(--color-mocha);font-style:italic;">Noch keine Angaben gemacht.</p>
+              </div>
+            </div>
+
+            <div class="catering-sidebar-box" style="background:var(--color-espresso);color:var(--color-bone);">
+              <h3 style="color:var(--color-bone);">Direkt kontaktieren</h3>
+              <p style="font-size:var(--text-sm);color:var(--color-parchment);margin-bottom:var(--space-4);">Lieber direkt sprechen? Kein Problem.</p>
+              <a href="tel:+41444223356" style="display:block;font-family:var(--font-display);font-size:var(--text-2xl);font-weight:700;color:var(--color-terracotta);text-decoration:none;margin-bottom:var(--space-3);">044 422 33 56</a>
+              <p style="font-size:var(--text-xs);color:var(--color-parchment);opacity:0.7;margin-bottom:var(--space-4);">Mo–Fr 09–13 / 14:30–18:30<br>Sa 08–16</p>
+              <a href="https://wa.me/41444223356" class="btn btn--whatsapp btn--full" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp schreiben
+              </a>
+            </div>
+
+            <div class="catering-sidebar-box">
+              <h3>Angebot &amp; Preise</h3>
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:var(--space-2);">
+                <li><a href="catering.html#grill" style="font-size:var(--text-sm);color:var(--color-terracotta);">→ Grillangebot</a></li>
+                <li><a href="catering.html#salat" style="font-size:var(--text-sm);color:var(--color-terracotta);">→ Salate &amp; Desserts</a></li>
+                <li><a href="catering.html#apero" style="font-size:var(--text-sm);color:var(--color-terracotta);">→ Apéro</a></li>
+                <li><a href="catering.html#menu-warm" style="font-size:var(--text-sm);color:var(--color-terracotta);">→ Warme Menüs</a></li>
+                <li><a href="catering.html#getraenke" style="font-size:var(--text-sm);color:var(--color-terracotta);">→ Getränke</a></li>
+                <li><a href="catering.html#vermietung" style="font-size:var(--text-sm);color:var(--color-terracotta);">→ Geräte &amp; Geschirr</a></li>
+              </ul>
+            </div>
+
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <svg class="nav__logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:44px;height:44px;margin-bottom:var(--space-4);">
+            <rect x="6" y="8" width="20" height="14" rx="2" fill="currentColor" opacity="0.9"/>
+            <rect x="24" y="10" width="5" height="4" rx="1" fill="currentColor"/>
+            <rect x="15" y="22" width="3" height="8" rx="1.5" fill="currentColor" opacity="0.7"/>
+          </svg>
+          <p class="footer__tagline">"Schweizer Qualität.<br>Zürcher Handwerk."</p>
+          <p>Gebr. Regattieri<br>Seefeldstrasse 181 · 8008 Zürich</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="speisekarte.html">Fleisch &amp; Spezialitäten</a></li>
+            <li><a href="takeaway.html">Take Away</a></li>
+            <li><a href="catering.html">Catering</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="bestellung.html">Bestellen</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Kontakt</h4>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <address>Seefeldstrasse 181<br>8008 Zürich</address>
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            <a href="tel:+41444223356">044 422 33 56</a>
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <a href="mailto:k.regattieri@gmail.com">k.regattieri@gmail.com</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Öffnungszeiten</h4>
+          <div class="footer__hours-row"><span>Mo–Fr</span><span>09:00–13:00</span></div>
+          <div class="footer__hours-row"><span></span><span>14:30–18:30</span></div>
+          <div class="footer__hours-row"><span>Samstag</span><span>08:00–16:00</span></div>
+          <div class="footer__hours-row"><span>Sonntag</span><span>Geschlossen</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:var(--space-4);">
+        <span>&copy; 2025 Seefeld Metzgerei · Gebr. Regattieri</span>
+        <div class="footer__legal-links">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/catering-order.js"></script>
+</body>
+</html>
