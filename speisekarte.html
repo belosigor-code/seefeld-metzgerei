@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Seefeld Metzgerei Speisekarte – Rindfleisch, Schweinefleisch, Kalbfleisch, Wurst & Spezialitäten aus der Tiroler Alpenregion.">
+  <title>Speisekarte – Seefeld Metzgerei</title>
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="site-nav" id="site-nav" role="navigation" aria-label="Hauptnavigation">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo" aria-label="Seefeld Metzgerei – Zurück zur Startseite">
+        <svg class="nav__logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="6" y="8" width="20" height="14" rx="2" fill="currentColor" opacity="0.9"/>
+          <rect x="24" y="10" width="5" height="4" rx="1" fill="currentColor"/>
+          <rect x="15" y="22" width="3" height="8" rx="1.5" fill="currentColor" opacity="0.7"/>
+          <line x1="8" y1="14" x2="22" y2="14" stroke="#FAF6EE" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+        </svg>
+        <span class="nav__logo-text">Seefeld Metzgerei</span>
+      </a>
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu" role="list">
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="speisekarte.html">Speisekarte</a></li>
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="bestellung.html" class="nav__cta">Bestellen</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero page-hero--short" aria-label="Speisekarte">
+      <div class="page-hero__overlay"></div>
+      <div class="page-hero__content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Startseite</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">Speisekarte</span>
+        </nav>
+        <h1>Unsere <em>Speisekarte</em></h1>
+        <p class="lead">Frisch, regional, handgemacht — entdecken Sie unsere tägliche Auswahl.</p>
+      </div>
+    </section>
+
+    <!-- CATEGORY TABS -->
+    <nav class="category-tabs" aria-label="Produktkategorien">
+      <ul class="category-tabs__list" role="list">
+        <li class="category-tabs__item"><a class="category-tabs__link" href="#rindfleisch">Rindfleisch</a></li>
+        <li class="category-tabs__item"><a class="category-tabs__link" href="#schweinefleisch">Schweinefleisch</a></li>
+        <li class="category-tabs__item"><a class="category-tabs__link" href="#kalbfleisch">Kalbfleisch</a></li>
+        <li class="category-tabs__item"><a class="category-tabs__link" href="#lammfleisch">Lammfleisch</a></li>
+        <li class="category-tabs__item"><a class="category-tabs__link" href="#gefluegel">Geflügel</a></li>
+        <li class="category-tabs__item"><a class="category-tabs__link" href="#wurst">Wurst &amp; Aufschnitt</a></li>
+        <li class="category-tabs__item"><a class="category-tabs__link" href="#spezialitaeten">Spezialitäten</a></li>
+        <li class="category-tabs__item"><a class="category-tabs__link" href="#saisonangebote">Saisonangebote</a></li>
+      </ul>
+    </nav>
+
+    <!-- ════ RINDFLEISCH ════ -->
+    <section id="rindfleisch" class="category-section" aria-labelledby="cat-rind">
+      <div class="container">
+        <div class="category-section__header">
+          <span class="overline">Vom Almbauern</span>
+          <h2 id="cat-rind">Rindfleisch</h2>
+          <p style="color:var(--color-mocha);max-width:600px;margin-top:var(--space-3);">Natürlich aufgewachsene Rinder aus Tiroler Almhaltung — saftig, aromatisch, mit echter Herkunft.</p>
+        </div>
+        <div class="product-grid">
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <span class="product-card__badge"><span class="badge badge--gold">28-Tage gereift</span></span>
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 34 L32 12 L54 34 L46 52 L18 52 Z" fill="currentColor"/><path d="M32 12 L38 32 L46 52" stroke="currentColor" stroke-width="2" opacity="0.4"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Rinderfilet</h3>
+              <p class="product-card__desc">Das Edelstück — zart und buttrig, trocken gereift für maximalen Geschmack.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">Marktpreis</div>
+                <a href="bestellung.html?produkt=Rinderfilet" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><ellipse cx="32" cy="32" rx="20" ry="14" fill="currentColor"/><ellipse cx="32" cy="32" rx="12" ry="8" fill="currentColor" opacity="0.4"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Entrecôte</h3>
+              <p class="product-card__desc">Wunderbar marmoriert, ideal zum Kurzbraten — ein Genuss für Fleischliebhaber.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">ab €5,80 <span>/ 100g</span></div>
+                <a href="bestellung.html?produkt=Entr%C3%AEc%C3%B4te" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="12" y="22" width="40" height="20" rx="6" fill="currentColor"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Tafelspitz</h3>
+              <p class="product-card__desc">Der österreichische Klassiker — mager, zart, zum Kochen und Schmoren perfekt.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">ab €3,20 <span>/ 100g</span></div>
+                <a href="bestellung.html?produkt=Tafelspitz" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M14 40 C14 28 22 18 36 20 C50 22 52 34 48 44 C44 52 30 54 20 48 C14 44 14 42 14 40Z" fill="currentColor"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Rinderhüfte</h3>
+              <p class="product-card__desc">Vielseitig einsetzbar — als Braten, Schnitzel oder Roulade eine sichere Wahl.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">ab €2,80 <span>/ 100g</span></div>
+                <a href="bestellung.html?produkt=Rinderhüfte" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <span class="product-card__badge"><span class="badge badge--terracotta">Hausgemacht</span></span>
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="32" cy="32" r="16" fill="currentColor"/><circle cx="32" cy="32" r="8" fill="currentColor" opacity="0.3"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Rindergulasch (gewürfelt)</h3>
+              <p class="product-card__desc">Perfekt zugeschnitten und gewürzt — fertig zum Einkochen, für das beste Gulasch.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">ab €2,50 <span>/ 100g</span></div>
+                <a href="bestellung.html?produkt=Rindergulasch" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 48 L28 18 L36 18 L48 48 Z" fill="currentColor"/><path d="M22 36 L42 36" stroke="#FAF6EE" stroke-width="2" opacity="0.4"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Beinscheibe</h3>
+              <p class="product-card__desc">Für reichhaltige Suppen und Eintöpfe — voller Mark, voller Geschmack.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">ab €1,90 <span>/ 100g</span></div>
+                <a href="bestellung.html?produkt=Beinscheibe" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ SCHWEINEFLEISCH ════ -->
+    <section id="schweinefleisch" class="category-section section--parchment" aria-labelledby="cat-schwein">
+      <div class="container">
+        <div class="category-section__header">
+          <span class="overline">Aus regionaler Haltung</span>
+          <h2 id="cat-schwein">Schweinefleisch</h2>
+        </div>
+        <div class="product-grid">
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <span class="product-card__badge"><span class="badge badge--terracotta">Hausgemacht</span></span>
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="14" y="22" width="36" height="20" rx="4" fill="currentColor"/><rect x="14" y="22" width="36" height="8" rx="4" fill="currentColor" opacity="0.5"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Schweinsbraten (marktfertig)</h3>
+              <p class="product-card__desc">Bereits gespickt und gewürzt — braten und genießen, der Rest ist Magie des Ofens.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">ab €2,20 <span>/ 100g</span></div>
+                <a href="bestellung.html?produkt=Schweinsbraten" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><ellipse cx="32" cy="32" rx="18" ry="12" fill="currentColor"/><ellipse cx="32" cy="32" rx="10" ry="6" fill="currentColor" opacity="0.4"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Karree</h3>
+              <p class="product-card__desc">Saftig und zart — als Kotelett oder ganzes Stück, immer ein Genuss.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">ab €1,80 <span>/ 100g</span></div>
+                <a href="bestellung.html?produkt=Karree" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <span class="product-card__badge"><span class="badge badge--gold">Saisonal</span></span>
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 44 L20 20 L44 20 L52 44 Z" fill="currentColor"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Stelze (Haxe)</h3>
+              <p class="product-card__desc">Der Tiroler Klassiker — knusprige Kruste, zartes Fleisch, für festliche Anlässe.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">ab €1,60 <span>/ 100g</span></div>
+                <a href="bestellung.html?produkt=Stelze" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ KALBFLEISCH ════ -->
+    <section id="kalbfleisch" class="category-section" aria-labelledby="cat-kalb">
+      <div class="container">
+        <div class="category-section__header">
+          <span class="overline">Zartes Almkalb</span>
+          <h2 id="cat-kalb">Kalbfleisch</h2>
+        </div>
+        <div class="product-grid">
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <span class="product-card__badge"><span class="badge badge--gold">Saisonal</span></span>
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 42 L28 16 L52 28 L44 50 Z" fill="currentColor"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Kalbstafelspitz</h3>
+              <p class="product-card__desc">Zart marmoriertes Kalbfleisch vom Almbauern — für die perfekte Sonntagsspeise.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">Marktpreis</div>
+                <a href="bestellung.html?produkt=Kalbstafelspitz" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><ellipse cx="32" cy="34" rx="16" ry="12" fill="currentColor"/><path d="M24 18 L32 24 L40 18" stroke="currentColor" stroke-width="3" fill="none"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Kalbsschnitzel</h3>
+              <p class="product-card__desc">Handgeschnitten, gleichmäßig dünn — für das klassische Wiener Schnitzel.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">ab €4,20 <span>/ 100g</span></div>
+                <a href="bestellung.html?produkt=Kalbsschnitzel" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="12" y="24" width="40" height="16" rx="8" fill="currentColor"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Kalbsrücken</h3>
+              <p class="product-card__desc">Feinfaserig und mild — der elegante Festtagsbraten für besondere Anlässe.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">Marktpreis</div>
+                <a href="bestellung.html?produkt=Kalbsrücken" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ LAMMFLEISCH ════ -->
+    <section id="lammfleisch" class="category-section section--parchment" aria-labelledby="cat-lamm">
+      <div class="container">
+        <div class="category-section__header">
+          <span class="overline">Alpenlamm</span>
+          <h2 id="cat-lamm">Lammfleisch</h2>
+        </div>
+        <div class="product-grid">
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <span class="product-card__badge"><span class="badge badge--gold">Saisonal</span></span>
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M14 40 C14 26 26 14 36 18 C48 22 52 36 46 46 C40 56 22 52 14 44 Z" fill="currentColor"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Lammkeule</h3>
+              <p class="product-card__desc">Frisches Alpenlamm aus der Region — aromatisch, zart und saisonal verfügbar.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">Marktpreis</div>
+                <a href="bestellung.html?produkt=Lammkeule" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 36 L28 14 L48 26 L36 50 Z" fill="currentColor"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Lammkotelett</h3>
+              <p class="product-card__desc">Dünn geschnitten, mit Knochen — für den Grill oder die heiße Pfanne.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">ab €4,80 <span>/ 100g</span></div>
+                <a href="bestellung.html?produkt=Lammkotelett" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ GEFLÜGEL ════ -->
+    <section id="gefluegel" class="category-section" aria-labelledby="cat-gefluegel">
+      <div class="container">
+        <div class="category-section__header">
+          <span class="overline">Freilandhaltung</span>
+          <h2 id="cat-gefluegel">Geflügel</h2>
+        </div>
+        <div class="product-grid">
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <span class="product-card__badge"><span class="badge badge--terracotta">Täglich frisch</span></span>
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 14 C20 14 12 28 14 40 C16 52 28 54 36 50 C44 46 50 38 48 28 C46 18 36 12 28 14 Z" fill="currentColor"/><path d="M28 14 C32 20 34 28 30 36" stroke="#FAF6EE" stroke-width="2" opacity="0.4"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Freilandhuhn (ganz)</h3>
+              <p class="product-card__desc">Aus artgerechter Freilandhaltung, täglich frisch — saftig und voller Geschmack.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">ab €12,00 <span>/ Stück</span></div>
+                <a href="bestellung.html?produkt=Freilandhuhn" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="16" y="20" width="32" height="24" rx="6" fill="currentColor"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Hühnerbrust</h3>
+              <p class="product-card__desc">Mager, zart, vielseitig — ohne Haut, handfiletiert für gleichmäßige Qualität.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">ab €2,40 <span>/ 100g</span></div>
+                <a href="bestellung.html?produkt=Hühnerbrust" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <span class="product-card__badge"><span class="badge badge--gold">Saisonal</span></span>
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M14 44 L26 16 L50 26 L42 52 Z" fill="currentColor"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Truthahnbrust</h3>
+              <p class="product-card__desc">Mageres Geflügelfleisch der Spitzenklasse — ideal zu Weihnachten oder als Braten.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">ab €2,80 <span>/ 100g</span></div>
+                <a href="bestellung.html?produkt=Truthahnbrust" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ WURST & AUFSCHNITT ════ -->
+    <section id="wurst" class="category-section section--parchment" aria-labelledby="cat-wurst">
+      <div class="container">
+        <div class="category-section__header">
+          <span class="overline">Nach Familienrezept</span>
+          <h2 id="cat-wurst">Wurst &amp; Aufschnitt</h2>
+          <p style="color:var(--color-mocha);max-width:600px;margin-top:var(--space-3);">Über 30 Sorten — alle hausgemacht, ohne Geschmacksverstärker und künstliche Zusatzstoffe.</p>
+        </div>
+        <div class="product-grid">
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <span class="product-card__badge"><span class="badge badge--terracotta">Hausgemacht</span></span>
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M14 34 C14 24 20 16 30 20 C40 24 46 34 44 44 C42 52 32 56 24 50 C16 44 14 38 14 34Z" fill="currentColor"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Seefelder Bergwurst</h3>
+              <p class="product-card__desc">Kräftig geräuchert nach altem Familienrezept, mit Bergspeck und Tiroler Gewürzen.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">ab €4,50 <span>/ 100g</span></div>
+                <a href="bestellung.html?produkt=Seefelder+Bergwurst" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <span class="product-card__badge"><span class="badge badge--terracotta">Täglich frisch</span></span>
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="12" y="20" width="40" height="24" rx="4" fill="currentColor"/><rect x="12" y="20" width="40" height="8" rx="4" fill="currentColor" opacity="0.4"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Hausmacher Leberkäse</h3>
+              <p class="product-card__desc">Frisch gebacken ab 7 Uhr täglich — knusprige Kruste, saftiger Kern.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">€2,80 <span>/ 100g</span></div>
+                <a href="bestellung.html?produkt=Hausmacher+Leberk%C3%A4se" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <span class="product-card__badge"><span class="badge badge--terracotta">Hausgemacht</span></span>
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M14 36 C12 24 22 12 36 16 C50 20 54 32 50 42 C46 52 28 58 18 48 C12 42 14 38 14 36Z" fill="currentColor"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Weißwurst</h3>
+              <p class="product-card__desc">Nach bayrisch-tiroler Tradition — zart, mild, mit frischer Petersilie. Ideal zum Frühstück.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">€2,20 <span>/ Stück</span></div>
+                <a href="bestellung.html?produkt=Weißwurst" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 14 L44 20 L40 50 L16 44 Z" fill="currentColor"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Blutwurst</h3>
+              <p class="product-card__desc">Kräftig gewürzt mit Majoran und Kümmel — ein Handwerk für Kenner.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">ab €1,90 <span>/ 100g</span></div>
+                <a href="bestellung.html?produkt=Blutwurst" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <span class="product-card__badge"><span class="badge badge--dark">NEU</span></span>
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><ellipse cx="32" cy="32" rx="18" ry="10" fill="currentColor"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Kräuterbratwurst</h3>
+              <p class="product-card__desc">Mit frischen Alpenkräutern — herrlich zum Grillen, ideal für die Grillsaison.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">€1,80 <span>/ Stück</span></div>
+                <a href="bestellung.html?produkt=Kräuterbratwurst" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M14 32 C14 22 22 14 32 14 C42 14 50 22 50 32 L44 38 L20 38 Z" fill="currentColor"/><path d="M20 38 L44 38 L42 50 L22 50 Z" fill="currentColor" opacity="0.6"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Leberwurst</h3>
+              <p class="product-card__desc">Cremig, mild und vollmundig — zum Aufstreichen oder als Beilage.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">ab €2,10 <span>/ 100g</span></div>
+                <a href="bestellung.html?produkt=Leberwurst" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ SPEZIALITÄTEN ════ -->
+    <section id="spezialitaeten" class="category-section" aria-labelledby="cat-spez">
+      <div class="container">
+        <div class="category-section__header">
+          <span class="overline">Tiroler Tradition</span>
+          <h2 id="cat-spez">Spezialitäten</h2>
+        </div>
+        <div class="product-grid">
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <span class="product-card__badge"><span class="badge badge--terracotta">Hausgemacht</span></span>
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="32" cy="32" r="18" fill="currentColor"/><circle cx="32" cy="32" r="10" fill="currentColor" opacity="0.3"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Griebenschmalz</h3>
+              <p class="product-card__desc">Selbst gemacht, mit knusprigen Grieben und Röstzwiebeln — zum Aufstreichen unübertroffen.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">ab €2,40 <span>/ 100g</span></div>
+                <a href="bestellung.html?produkt=Griebenschmalz" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="14" y="18" width="36" height="28" rx="6" fill="currentColor"/><line x1="14" y1="32" x2="50" y2="32" stroke="#FAF6EE" stroke-width="2" opacity="0.4"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Sülze</h3>
+              <p class="product-card__desc">Handgemacht mit Gemüse und Kräutern — altösterreichische Tradition at its finest.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">ab €2,80 <span>/ 100g</span></div>
+                <a href="bestellung.html?produkt=Sülze" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <span class="product-card__badge"><span class="badge badge--dark">NEU</span></span>
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M14 44 C12 30 20 14 36 14 C50 14 56 28 52 42 C48 54 32 60 20 52 Z" fill="currentColor"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Liptauer</h3>
+              <p class="product-card__desc">Würziger Frischkäse-Aufstrich nach Tiroler Art — perfekt zum Bauernbrot.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">ab €1,80 <span>/ 100g</span></div>
+                <a href="bestellung.html?produkt=Liptauer" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ SAISONANGEBOTE ════ -->
+    <section id="saisonangebote" class="category-section section--parchment" aria-labelledby="cat-saison">
+      <div class="container">
+        <div class="category-section__header">
+          <span class="overline">Nur für kurze Zeit</span>
+          <h2 id="cat-saison">Saisonangebote</h2>
+          <p style="color:var(--color-mocha);max-width:600px;margin-top:var(--space-3);">Was die Jahreszeit bringt — frisch, regional und nur solange der Vorrat reicht.</p>
+        </div>
+        <div class="product-grid">
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <span class="product-card__badge"><span class="badge badge--gold">Saisonal</span></span>
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M14 40 C14 26 26 14 36 18 C48 22 52 36 46 46 C40 56 22 52 14 44 Z" fill="currentColor"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Frisches Alpenlamm</h3>
+              <p class="product-card__desc">Direkt vom Almbauern — nur im Frühling und Sommer. Jetzt vorbestellen!</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">Marktpreis</div>
+                <a href="bestellung.html?produkt=Frisches+Alpenlamm" class="btn btn--outline btn--sm">Vorbestellen →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <span class="product-card__badge"><span class="badge badge--gold">Saisonal</span></span>
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 42 L28 16 L52 28 L46 50 Z" fill="currentColor"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Weihnachtsgans (vorbestellbar)</h3>
+              <p class="product-card__desc">Frische Freilandgans zu Weihnachten — begrenzte Stückzahl, jetzt reservieren!</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">Marktpreis</div>
+                <a href="bestellung.html?produkt=Weihnachtsgans" class="btn btn--outline btn--sm">Vorbestellen →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image">
+              <span class="product-card__badge"><span class="badge badge--terracotta">Grillsaison</span></span>
+              <svg class="product-card__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><ellipse cx="32" cy="30" rx="16" ry="10" fill="currentColor"/><line x1="16" y1="48" x2="48" y2="48" stroke="currentColor" stroke-width="3"/></svg>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Grillpaket (für 4 Personen)</h3>
+              <p class="product-card__desc">Entrecôte, Bratwurst, Kräuterbratwurst & Hähnchenschenkel — das perfekte Grillset.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price">€38,00 <span>/ Set</span></div>
+                <a href="bestellung.html?produkt=Grillpaket+4+Personen" class="btn btn--outline btn--sm">Bestellen →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SEASONAL BANNER -->
+    <div class="seasonal-banner" role="complementary" aria-label="Saisonangebot">
+      <div class="container">
+        <p><strong>Saisonangebot:</strong> Frisches Lammfleisch aus der Alpenregion — nur für kurze Zeit verfügbar. <a href="bestellung.html?produkt=Frisches+Alpenlamm" style="color:var(--color-bone);text-decoration:underline;font-weight:700;">Jetzt vorbestellen →</a></p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:44px;height:44px;margin-bottom:var(--space-4);color:var(--color-terracotta);">
+            <rect x="6" y="8" width="20" height="14" rx="2" fill="currentColor" opacity="0.9"/>
+            <rect x="24" y="10" width="5" height="4" rx="1" fill="currentColor"/>
+            <rect x="15" y="22" width="3" height="8" rx="1.5" fill="currentColor" opacity="0.7"/>
+          </svg>
+          <p class="footer__tagline">"Gutes Fleisch.<br>Ehrliches Handwerk."</p>
+          <p>Familie Huber, Seefeld in Tirol.<br>Handwerk seit 1987.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="speisekarte.html">Speisekarte</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="bestellung.html">Bestellen</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Kontakt</h4>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <address>Dorfplatz 12<br>6100 Seefeld in Tirol</address>
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            <a href="tel:+4351220000">+43 5122 00 000</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Öffnungszeiten</h4>
+          <div class="footer__hours-row"><span>Mo–Fr</span><span>7:00–18:00</span></div>
+          <div class="footer__hours-row"><span>Samstag</span><span>7:00–13:00</span></div>
+          <div class="footer__hours-row"><span>Sonntag</span><span>Geschlossen</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:var(--space-4);">
+        <span>&copy; 2025 Seefeld Metzgerei · Familie Huber</span>
+        <div class="footer__legal-links">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/nav.js"></script>
+</body>
+</html>
