@@ -44,10 +44,11 @@
 }
 
 .nav__logo-icon {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   color: var(--color-terracotta);
   flex-shrink: 0;
+  object-fit: contain;
 }
 
 .nav__logo-text {
