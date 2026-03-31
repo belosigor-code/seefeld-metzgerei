@@ -159,6 +159,8 @@
     padding: var(--space-4);
     gap: var(--space-1);
     box-shadow: var(--shadow-lg);
+    max-height: calc(100vh - var(--nav-height));
+    overflow-y: auto;
   }
 
   .nav__menu.nav__menu--open {
@@ -190,6 +192,16 @@
 .page-hero--short {
   min-height: 45vh;
   padding-block: var(--space-16);
+}
+
+@media (max-width: 600px) {
+  .page-hero {
+    min-height: 65vh;
+  }
+
+  .page-hero--short {
+    min-height: 30vh;
+  }
 }
 
 .page-hero__overlay {

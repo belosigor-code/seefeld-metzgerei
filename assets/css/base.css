@@ -272,6 +272,20 @@ p {
   padding-block: var(--space-32);
 }
 
+@media (max-width: 600px) {
+  .section {
+    padding-block: var(--space-12);
+  }
+
+  .section--sm {
+    padding-block: var(--space-8);
+  }
+
+  .section--lg {
+    padding-block: var(--space-16);
+  }
+}
+
 .section--dark {
   background-color: var(--color-charcoal);
   color: var(--color-bone);
