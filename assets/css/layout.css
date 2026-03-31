@@ -202,6 +202,15 @@
   .page-hero--short {
     min-height: 30vh;
   }
+
+  .page-hero__cta-group {
+    flex-direction: column;
+  }
+
+  .page-hero__cta-group .btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .page-hero__overlay {
